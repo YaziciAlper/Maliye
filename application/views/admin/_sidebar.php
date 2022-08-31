@@ -11,10 +11,10 @@
     <!-- Sidebar user (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="<?=base_url()?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        <img src="<?=base_url()?>uploads/<?=$this->session->admin_session["resim"]?>" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">Alper Yazıcı</a>
+        <a href="#" class="d-block"><?=$this->session->admin_session["adsoy"]?></a>
       </div>
     </div>
 
@@ -30,6 +30,8 @@
       </div>
     </div>
 
+
+
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -37,7 +39,7 @@
              with font-awesome or any other icon font library -->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="fa fa-home" aria-hidden="true"></i>
             <p>
               Ana Sayfa
             </p>
@@ -48,7 +50,7 @@
 
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
+            <i class="fa fa-users"></i>
             <p>
               Kullanıcı İşlemleri
               <i class="fas fa-angle-left right"></i>
@@ -70,6 +72,33 @@
             </li>
           </ul>
         </li>
+
+        <li class="nav-header">AYARLAR</li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon far fa-circle text-info"></i>
+            <p>Admin</p>
+          </a>
+        </li>
+
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon far fa-circle text-danger"></i>
+            <p class="text">Ayarlar</p>
+          </a>
+        </li>
+
+<?php if($this->session->userdata("admin_session")){ ?>
+        <li class="nav-item">
+          <a href="<?=base_url()?>admin/login/login_cikis" class="nav-link">
+            <i class="nav-icon far fa-circle text-danger"></i>
+            <p class="text">Çıkış</p>
+          </a>
+        </li>
+
+<?php } ?>
 
 
 
