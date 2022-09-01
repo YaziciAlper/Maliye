@@ -38,7 +38,7 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="<?=base_url().'admin/home' ?>" class="nav-link">
             <i class="fa fa-home" aria-hidden="true"></i>
             <p>
               Ana Sayfa
@@ -59,7 +59,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="../layout/top-nav.html" class="nav-link">
+              <a href="<?=base_url().'admin/kullanicilar'?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>KullanıcıLarı Görüntüle</p>
               </a>
