@@ -41,6 +41,46 @@ class Database_Model extends CI_Model {
 
         }
 
+        public function kullanici_ekle($tablo,$data){
+
+           $result = $this->db->insert($tablo,$data);
+           return $result;
+
+
+
+
+        }
+
+        public function kullanici_sil($id,$table){
+          $this->db->where('id', $id);
+          return $this->db->delete($table);
+
+
+
+
+          //kayıt Varsa
+
+        }
+
+        public function kullanici_getir($id,$tablo){
+
+          $this->db->select("*");
+          $this->db->from($tablo);
+          $this->db->where('id', $id);
+          $query = $this->db->get();
+          return $query->result();
+        }
+
+        public function kullanici_guncelle($id,$tablo,$data){
+
+          $this->db->where('id', $id);  //Hangi satırın güncelleneceği belirleniyor.
+          $this->db->set('guncellenme_tarihi', 'DATE_ADD(NOW(), INTERVAL 1 MINUTE)', FALSE);
+		      return $this->db->update($tablo, $data); //Güncelleme yapılıyor.
+
+
+        }
+
+
 }
 
 

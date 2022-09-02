@@ -16,7 +16,7 @@
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?=base_url()?>admin/home">Anasayfa</a></li>
+            <li class="breadcrumb-item"><a href="#">Kullanıcılar</a></li>
             <li class="breadcrumb-item active">Kullanıcı Listesi</li>
           </ol>
         </div>
@@ -30,15 +30,6 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-
-        <?php if($this->session->flashdata("mesaj")){ ?>
-        <div class="alert alert-success alert-dismissible">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-
-                  <?=$this->session->flashdata("mesaj")?>
-                </div>
-
-        <?php } ?>
         <h3 class="card-title"><a href="<?=base_url()?>admin/kullanicilar/ekle"><button type="button" class="btn btn-block btn-outline-success">Kullanıcı Ekle</button></a></h3>
 
         <div class="card-tools">
@@ -54,12 +45,11 @@
                 <div class="card-header">
                   <div class="card-tools">
                     <ul class="pagination pagination-sm float-right">
-
-                          <?= $linkler?></a></li>
-
-
-
-
+                      <li class="page-item"><a class="page-link" href="#">«</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">»</a></li>
                     </ul>
                   </div>
                 </div>
@@ -93,7 +83,7 @@
                         <td><?=$rs->telefon?></td>
                         <td><?=$rs->durum?></td>
                         <td><a href="<?=base_url()?>admin/kullanicilar/guncelle/<?=$rs->id?>"><button type="button" class="btn btn-block btn-outline-info">Güncelle</button></a></td>
-                        <td><a href="<?=base_url()?>admin/kullanicilar/kullanici_sil/<?=$rs->id?>"><button type="button" class="btn btn-block btn-outline-danger">Sil</button></a></td>
+                        <td><a href="<?=base_url()?>admin/kullanicilar/sil/<?=$rs->id?>"><button type="button" class="btn btn-block btn-outline-danger">Sil</button></a></td>
                       </tr>
                     <?php  $i++; }?>
 

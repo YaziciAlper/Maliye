@@ -59,15 +59,39 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?=base_url().'admin/kullanicilar'?>" class="nav-link">
+              <a href="<?=base_url().'admin/sayfalama'?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>KullanıcıLarı Görüntüle</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="../layout/top-nav-sidebar.html" class="nav-link">
+              <a href="<?=base_url()?>admin/kullanicilar/ekle" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Kullanıcı Ekle</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fa fa-users"></i>
+            <p>
+              Görev İşlemleri
+              <i class="fas fa-angle-left right"></i>
+
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?=base_url().'admin/kullanicilar'?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Görevleri Görüntüle</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?=base_url()?>admin/kullanicilar/ekle" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Görev Ekle</p>
               </a>
             </li>
           </ul>
